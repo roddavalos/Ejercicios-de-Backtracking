@@ -26,20 +26,22 @@ public class PermutacionesDeStrings {
             }
         }
     }
+    // Función principal para generar permutaciones de una cadena
     public static void permuta2(String palabra){
         permuta("", palabra); // Llamada inicial a la función recursiva con una permutación vacía
     }
     
+    // Función recursiva para generar permutaciones
     private static void permuta2(String palabra, String palabra2){
         if(palabra.length() == palabra2.length())
-            System.out.println(palabra);
-        else
+            System.out.println(palabra); // Si la longitud de la permutación es igual a la longitud original, se imprime
+        else {
             for(int i = 0; i < palabra2.length(); i++){
-                palabra = palabra + palabra2.charAt(i);
-                permuta2(palabra,palabra2);
-                palabra = palabra.substring(0,palabra.length()-1);
+                palabra = palabra + palabra2.charAt(i); // Agregar el carácter actual a la permutación
+                permuta2(palabra, palabra2); // Llamada recursiva con la permutación actualizada y la palabra original
+                palabra = palabra.substring(0, palabra.length() - 1); // Eliminar el último carácter para probar otros
             }
-            
+        }
     }
     
     public static void main(String[] args) {
