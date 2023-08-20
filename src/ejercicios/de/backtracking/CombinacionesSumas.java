@@ -37,6 +37,7 @@ public class CombinacionesSumas {
     
     public static void main(String[] args) {
         combinacionesSumas(3); // Generar y mostrar combinaciones de sumas para el número 3
+        combinacionesSumas(4);
     }
 }
 
