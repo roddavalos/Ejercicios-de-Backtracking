@@ -9,7 +9,6 @@ package ejercicios.de.backtracking;
  * @author rod_c
  */
 public class PermutacionesDeStrings {
-    public class PermutationsOfString {
 
     // Función principal para generar permutaciones de una cadena
     public static void permuta(String palabra){
@@ -44,9 +43,10 @@ public class PermutacionesDeStrings {
     }
     
     public static void main(String[] args) {
-        permuta("abc"); // Generar y mostrar permutaciones para la cadena "abc"
+        //permuta("abc"); // Generar y mostrar permutaciones para la cadena "abc"
         permuta2("abc");
+        permuta2("hola");
     }
-}
+
 
 }
