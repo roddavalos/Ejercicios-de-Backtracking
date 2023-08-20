@@ -27,9 +27,25 @@ public class PermutacionesDeStrings {
             }
         }
     }
+    public static void permuta2(String palabra){
+        permuta("", palabra); // Llamada inicial a la función recursiva con una permutación vacía
+    }
+    
+    private static void permuta2(String palabra, String palabra2){
+        if(palabra.length() == palabra2.length())
+            System.out.println(palabra);
+        else
+            for(int i = 0; i < palabra2.length(); i++){
+                palabra = palabra + palabra2.charAt(i);
+                permuta2(palabra,palabra2);
+                palabra = palabra.substring(0,palabra.length()-1);
+            }
+            
+    }
     
     public static void main(String[] args) {
         permuta("abc"); // Generar y mostrar permutaciones para la cadena "abc"
+        permuta2("abc");
     }
 }
 
